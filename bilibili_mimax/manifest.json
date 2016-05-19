@@ -1,0 +1,21 @@
+{
+"name": "bilibili mimax",
+"version": "0.1",
+"description": "Send bilibili message automatically on mimax drawing time.",
+"icons": {"128":"icon128.png"},
+"background": {
+    "scripts": ["background.js"]
+},
+"permissions":["http://live.bilibili.com/*", "tabs"],
+"browser_action":{
+    "default_title":"running...",
+    "default_icon":"icon128.png"},
+"content_scripts": [
+    {
+        "matches": ["http://live.bilibili.com/1"],
+        "js": ["main.js"]
+	}
+],
+"web_accessible_resources": ["content.js"],
+"manifest_version":2
+}
