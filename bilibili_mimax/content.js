@@ -19,7 +19,7 @@ $(function () {
 		var minute = date.getMinutes();
 		console.log("现在时间：" + date.toLocaleString());
 		if ( hour > 12 && hour < 24 && minute < 60 && minute > 49){
-			send("Are you ok, 小米Max? 我觉得还能坚持" + getRandomInt(100, 10000) + "秒!");
+			send("Are you ok, 小米Max? 我觉得还能坚持" + getRandomInt(1e3, 1e6) + "秒!");
 		}
 	}, 30 * 1e3);
 });
