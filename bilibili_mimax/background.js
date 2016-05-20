@@ -10,16 +10,18 @@ setInterval(function(){
 				{
 					console.log("return " + tabs.length)
 					console.log("Open new.")
-					chrome.tabs.create({url:"http://live.bilibili.com/1"});
+					chrome.tabs.create({url:"http://live.bilibili.com/1", active:true}, function(tab){
+						chrome.windows.update(tab.windowId, {focused:true})
+					});
 				}else{
 					console.log("Opened " + tabs.length)
-					if (50 == minute)
-					{
+					if (50 == minute){
 						console.log("Reload and set active the first one, close others.")
 						for(var i = 1; i < tabs.length; i++)
 						{
 							chrome.tabs.remove(tabs[i].id);
 						}
+						chrome.windows.update(tabs[0].windowId, {focused:true})
 						chrome.tabs.reload(tabs[0].id);
 						chrome.tabs.update(tabs[0].id, {active:true});
 					}
