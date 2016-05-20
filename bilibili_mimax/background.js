@@ -4,7 +4,7 @@ setInterval(function(){
 	var minute = date.getMinutes();
 	console.log("Now：" + date.toLocaleString());
 
-	if ( hour > 12 && hour < 24 && minute < 60 && minute > 49){
+	if ( hour > 11 && hour < 24 && minute < 60 && minute > 49){
 		chrome.tabs.query({url:"http://live.bilibili.com/1"}, function(tabs){
 				if (tabs.length < 1)
 				{
