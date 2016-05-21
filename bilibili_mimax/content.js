@@ -18,7 +18,7 @@ $(function () {
 		var hour = date.getHours();
 		var minute = date.getMinutes();
 		console.log("现在时间：" + date.toLocaleString());
-		if ( hour > 11 && hour < 24 && minute < 60 && minute > 49){
+		if ( hour >= 11 && hour < 24 && minute < 60 && minute >= 49){
 			send("Are you ok, 小米Max? 我觉得还能坚持" + getRandomInt(1e3, 1e6) + "秒!");
 		}
 	}, 30 * 1e3);
