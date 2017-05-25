@@ -5,12 +5,12 @@ setInterval(function(){
 	console.log("Now：" + date.toLocaleString());
 
 	if ( hour >= 11 && hour < 24 && minute < 60 && minute >= 49){
-		chrome.tabs.query({url:"http://live.bilibili.com/1"}, function(tabs){
+		chrome.tabs.query({url:"http://live.bilibili.com/545342"}, function(tabs){
 				if (tabs.length < 1)
 				{
 					console.log("return " + tabs.length)
 					console.log("Open new.")
-					chrome.tabs.create({url:"http://live.bilibili.com/1", active:true}, function(tab){
+					chrome.tabs.create({url:"http://live.bilibili.com/545342", active:true}, function(tab){
 						chrome.windows.update(tab.windowId, {focused:true})
 					});
 				}else{
@@ -28,4 +28,4 @@ setInterval(function(){
 				}
 		});
 	}
-}, 60 * 1e3);
+}, 30 * 1e3);

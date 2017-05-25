@@ -12,7 +12,7 @@
     "default_icon":"icon128.png"},
 "content_scripts": [
     {
-        "matches": ["http://live.bilibili.com/1"],
+        "matches": ["http://live.bilibili.com/545342"],
         "js": ["main.js"]
 	}
 ],

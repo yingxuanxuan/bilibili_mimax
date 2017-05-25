@@ -18,8 +18,6 @@ $(function () {
 		var hour = date.getHours();
 		var minute = date.getMinutes();
 		console.log("现在时间：" + date.toLocaleString());
-		if ( hour >= 11 && hour < 24 && minute < 60 && minute >= 49){
-			send("我为小米Max再续" + getRandomInt(1e3, 1e5) + "秒!");
-		}
+        send("我为小米Max2再续" + getRandomInt(1e3, 1e5) + "秒!");
 	}, 30 * 1e3);
 });
